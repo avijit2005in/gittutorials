@@ -100,7 +100,7 @@ class ObjectDetector(object):
     #model_dir = pathlib.Path(model_dir)/"saved_model"
 
     #model = tf.saved_model.load(str(model_dir))
-    model = tf.saved_model.load("/opt/crop_parts_detection_app_p1/my_model/saved_model")
+    model = tf.saved_model.load("/opt/my_models/model_experiment_5")
     model = model.signatures['serving_default']
     self.model = model
 
