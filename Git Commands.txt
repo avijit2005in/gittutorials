@@ -1,0 +1,265 @@
+(base) BLLT-3009000:github avijitdas$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/avijitdas/Desktop/gcp_vm/github/.git/
+(base) BLLT-3009000:github avijitdas$ git config --global user.name
+avijit2005in
+(base) BLLT-3009000:github avijitdas$ git config --global user.email
+avijit2005in@gmail.com
+(base) BLLT-3009000:github avijitdas$ echo "# gittutorials" >> README.md
+(base) BLLT-3009000:github avijitdas$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	README.md
+	git-cheat-sheet-education.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) BLLT-3009000:github avijitdas$ git add README.md
+(base) BLLT-3009000:github avijitdas$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	git-cheat-sheet-education.pdf
+
+(base) BLLT-3009000:github avijitdas$ git commit -m "first commit"
+[master (root-commit) 9d304ae] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+(base) BLLT-3009000:github avijitdas$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	git-cheat-sheet-education.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) BLLT-3009000:github avijitdas$ git branch
+* master
+(base) BLLT-3009000:github avijitdas$ git branch -M main
+(base) BLLT-3009000:github avijitdas$ git branch
+* main
+(base) BLLT-3009000:github avijitdas$ git remote add origin https://github.com/avijit2005in/gittutorials.git
+(base) BLLT-3009000:github avijitdas$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	git-cheat-sheet-education.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) BLLT-3009000:github avijitdas$ git remote -v
+origin	https://github.com/avijit2005in/gittutorials.git (fetch)
+origin	https://github.com/avijit2005in/gittutorials.git (push)
+(base) BLLT-3009000:github avijitdas$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 222 bytes | 222.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/avijit2005in/gittutorials.git
+ * [new branch]      main -> main
+(base) BLLT-3009000:github avijitdas$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	git-cheat-sheet-education.pdf
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) BLLT-3009000:github avijitdas$ git sttus
+git: 'sttus' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+(base) BLLT-3009000:github avijitdas$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	git-cheat-sheet-education.pdf
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) BLLT-3009000:github avijitdas$ echo ".DS_Store" >> .gitignore
+(base) BLLT-3009000:github avijitdas$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	git-cheat-sheet-education.pdf
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) BLLT-3009000:github avijitdas$ git add .
+(base) BLLT-3009000:github avijitdas$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .gitignore
+	modified:   README.md
+	new file:   git-cheat-sheet-education.pdf
+
+(base) BLLT-3009000:github avijitdas$ git commit -m "Second Commit"
+[main f9d044a] Second Commit
+ 3 files changed, 2 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 git-cheat-sheet-education.pdf
+(base) BLLT-3009000:github avijitdas$ git remote -v
+origin	https://github.com/avijit2005in/gittutorials.git (fetch)
+origin	https://github.com/avijit2005in/gittutorials.git (push)
+(base) BLLT-3009000:github avijitdas$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 91.13 KiB | 18.23 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/avijit2005in/gittutorials.git
+   9d304ae..f9d044a  main -> main
+(base) BLLT-3009000:github avijitdas$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	crop_parts_detection_app_p2/
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) BLLT-3009000:github avijitdas$ git add .
+warning: adding embedded git repository: crop_parts_detection_app_p2
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint: 	git submodule add <url> crop_parts_detection_app_p2
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint: 	git rm --cached crop_parts_detection_app_p2
+hint: 
+hint: See "git help submodule" for more information.
+(base) BLLT-3009000:github avijitdas$ git commit -m "Third Commit"
+[main de3202f] Third Commit
+ 1 file changed, 1 insertion(+)
+ create mode 160000 crop_parts_detection_app_p2
+(base) BLLT-3009000:github avijitdas$ git status
+On branch main
+nothing to commit, working tree clean
+(base) BLLT-3009000:github avijitdas$ git branch
+* main
+(base) BLLT-3009000:github avijitdas$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 371 bytes | 371.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/avijit2005in/gittutorials.git
+   f9d044a..de3202f  main -> main
+(base) BLLT-3009000:github avijitdas$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    crop_parts_detection_app_p2
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	crop_parts_detection_app_p3/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) BLLT-3009000:github avijitdas$ git add .
+(base) BLLT-3009000:github avijitdas$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    crop_parts_detection_app_p2
+	new file:   crop_parts_detection_app_p3/app.py
+	new file:   crop_parts_detection_app_p3/decorator.py
+	new file:   crop_parts_detection_app_p3/object-detection.service
+	new file:   crop_parts_detection_app_p3/templates/_formhelpers.html
+	new file:   crop_parts_detection_app_p3/templates/upload.html
+
+(base) BLLT-3009000:github avijitdas$ git commit -m "Forth Commit"
+[main 98586ef] Forth Commit
+ 6 files changed, 329 insertions(+), 1 deletion(-)
+ delete mode 160000 crop_parts_detection_app_p2
+ create mode 100644 crop_parts_detection_app_p3/app.py
+ create mode 100644 crop_parts_detection_app_p3/decorator.py
+ create mode 100644 crop_parts_detection_app_p3/object-detection.service
+ create mode 100644 crop_parts_detection_app_p3/templates/_formhelpers.html
+ create mode 100644 crop_parts_detection_app_p3/templates/upload.html
+(base) BLLT-3009000:github avijitdas$ git push origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 4.74 KiB | 4.74 MiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/avijit2005in/gittutorials.git
+   de3202f..98586ef  main -> main
+(base) BLLT-3009000:github avijitdas$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   crop_parts_detection_app_p3/app.py
+	modified:   crop_parts_detection_app_p3/object-detection.service
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) BLLT-3009000:github avijitdas$ git add .
+(base) BLLT-3009000:github avijitdas$ git commit -m "Updated Application"
+[main 97f5ce3] Updated Application
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+(base) BLLT-3009000:github avijitdas$ git push origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 521 bytes | 521.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/avijit2005in/gittutorials.git
+   98586ef..97f5ce3  main -> main
+(base) BLLT-3009000:github avijitdas$ 
+  [Restored 09-Sep-2022 at 11:27:37 PM]
+Last login: Fri Sep  9 23:27:33 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) BLLT-3009000:github avijitdas$ 

@@ -100,7 +100,7 @@ class ObjectDetector(object):
     #model_dir = pathlib.Path(model_dir)/"saved_model"
 
     #model = tf.saved_model.load(str(model_dir))
-    model = tf.saved_model.load("/opt/my_models/model_experiment_5")
+    model = tf.saved_model.load("/opt/my_models/model_experiment_5/inference_graph/saved_model")
     model = model.signatures['serving_default']
     self.model = model
 

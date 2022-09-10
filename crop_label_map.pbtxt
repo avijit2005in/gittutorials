@@ -1,0 +1,14 @@
+item {
+  id: 1
+  name: 'Fruit'
+}
+
+item {
+  id: 2
+  name: 'Leaf'
+}
+
+item {
+  id: 3
+  name: 'Stem'
+}
